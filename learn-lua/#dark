@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+  <html>
+   <head>
+    <link rel="icon"  href="/learnlua.png"/> <!-- Favicon-->
+    <title>Learn Lua - Home</title> <!-- Site title-->
+     <style>
+      /* CSS */
+      @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap'); /* Import Roboto */
+ 
+
+      html, body {
+        margin: 0;
+        padding: 0;
+        background-color: #181818;
+      }
+      
+      /* Top Bar */
+      .TopBar {
+        overflow: hidden;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: #121212;
+      }
+      .TopBar a {
+        float: right;
+        color: #808080;
+        text-align: right;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        font-family: 'Roboto', sans-serif;
+        margin: 5px;
+      }
+
+      .TopBar a:hover {
+        color: #a7a7a7;
+      }
+
+      .TopBar a.Current {
+        color: white;
+        font-weight: bold;
+      }
+      
+      .TopLogo {
+        max-width: 6%;
+        max-height: 6%;
+        padding: 5px 10px;
+        float: left;
+      }
+
+      .Title {
+        float: left;
+        font-size: 20px;
+        font-family: 'Roboto', sans-serif;
+        padding-top: 0px;
+        margin-top: 17px;
+        color: white;
+      }
+      
+      /* Learn Lua Logo (Center) */
+      .CenterLogo {
+        display: block;
+        margin: 0 auto;
+        max-width: 27%;
+        max-height: 27%;
+        margin-top: 80px;
+      }
+
+      /* Into Paragraph */
+      .IntroText {
+        display: block;
+        margin: 0 auto;
+        max-width: 65%;
+        font-size: 18px;
+        font-family: 'Roboto', sans-serif;
+        text-align: center;
+        margin-top: 50px;
+        color: #b3b3b3;
+      }
+
+      /* Learn Button */
+      .LearnButton {
+        padding: 10px 100px;
+        display: block;
+        margin: 0 auto;
+        margin-top: 60px;
+        background-color: #404040;
+        color: rgba(249,249,249,1);
+        border-style: none;
+        font-weight: bold;
+        font-size: 16px;
+        font-family: 'Roboto', sans-serif;
+        border-radius: 8px;
+      }
+
+      /* Collaborators Section */
+      .Collabs {
+        background-color: #404040;
+        padding-top: 20px;
+        margin-top: 60px;
+        
+      }
+
+      .CollabsText {
+        float: center;
+        text-align: center;
+        font-size: 50px;
+        color: white;
+        font-family: 'Roboto', sans-serif;
+        font-weight: bold;
+        margin-bottom: 20px;
+      }
+      
+      .AlemDevPNG {
+        max-width: 10%;
+        max-height: 10%;
+        border: 5px;
+        border-style: solid;
+        border-radius: 50%;
+        border-color: white;
+      }
+
+      .USERNAME {
+        font-weight: bold;
+        color: white;
+        font-family: 'Roboto', sans-serif;
+        font-size: 20px;
+        margin-left: 0%;
+        margin-top: 3px;
+        margin-bottom: 0px;
+      }
+
+      .AlemDev {
+        padding: 50px;
+        padding-top: 20px;
+        text-align: center;
+      }
+
+      .Desc {
+        color: white;
+        font-family: 'Roboto', sans-serif;
+        margin-top: 0px;
+        padding-top: 5px;
+      }
+
+      .Contributors {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        flex-wrap: wrap;
+      }
+
+      .Contributor {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-family: 'Roboto', sans-serif;
+        font-weight: bold;
+        font-size: 20px;
+        margin: 0;
+        padding: 0;
+      }
+
+      .PNG {
+        max-width: 30%;
+        border: 5px;
+        border-style: solid;
+        border-radius: 50%;
+      }
+
+      .Switch {
+        max-width: 2.5%;
+        margin: 13px;
+        float: right;
+        margin-right: 15px;
+      }
+
+      .Switch:hover {
+        opacity: 75%;
+      }
+     </style>
+   </head>
+   <body>
+    <div class="TopBar">
+      <img class="TopLogo" src="learnlua.png">
+      <p class="Title">Learn Lua</p>
+      <img class="Switch" src="dark.png" onclick="window.location='index.html'">
+      <a href="#update">Update Log</a>    
+      <a href="#learn">Projects</a>   
+      <a href="#learn">Learn</a>  
+      <a class="Current" href="#home">Home</a>
+    </div>
+    <img class="CenterLogo" src="learnlua.png">
+    <p class="IntroText">Welcome to the fascinating world of Roblox Studio! I guess you wanted to start learning, or learn more if you already know some basics. Here at Learn Lua, we'll teach you from the very beginning to the very end. </p>
+    <button class="LearnButton">Start Learning</button>
+    <div class="Collabs">
+      <p class="CollabsText">COLLABORATORS</p>
+      <div class="AlemDev">
+        <img class="AlemDevPNG" src="https://tr.rbxcdn.com/4c37fd26de1879a480868b6b54323bc9/420/420/AvatarHeadshot/Png/isCircular" alt="AlemDev">
+        <p class="USERNAME">AlemDev</p>
+        <p class="Desc">Project Lead</p>
+      </div>
+      <div class="Contributors">
+         <div class="Contributor">
+         <img class="PNG" src="https://tr.rbxcdn.com/4c37fd26de1879a480868b6b54323bc9/420/420/AvatarHeadshot/Png/isCircular" alt="AlemDev">
+          <p class="USERNAME1">QVGK</p>
+       </div>
+       <div class="Contributor">
+         <img class="PNG" src="https://tr.rbxcdn.com/4c37fd26de1879a480868b6b54323bc9/420/420/AvatarHeadshot/Png/isCircular" alt="AlemDev">
+          <p class="USERNAME1">QVGK</p>
+        </div>
+        <div class="Contributor">
+          <img class="PNG" src="https://tr.rbxcdn.com/4c37fd26de1879a480868b6b54323bc9/420/420/AvatarHeadshot/Png/isCircular" alt="AlemDev">
+          <p class="USERNAME1">QVGK</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- API's [SOON!] -->
+   </body>
+  </html>
