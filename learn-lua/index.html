@@ -6,7 +6,6 @@
      <style>
       /* CSS */
       @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap'); /* Import Roboto */
- 
 
       html, body {
         margin: 0;
@@ -19,11 +18,12 @@
         position: fixed;
         top: 0;
         width: 100%;
-        background-color: white;
+        background-color: lightgray;
       }
-      #TopBar a {
+
+      #TopBar .nav {
         float: right;
-        color: #808080;
+        color: black;
         text-align: right;
         padding: 14px 16px;
         text-decoration: none;
@@ -32,8 +32,8 @@
         margin: 5px;
       }
 
-      #TopBar a:hover {
-        color: #a7a7a7;
+      #TopBar .nav:hover {
+        opacity: 60%;
       }
 
       #TopBar a.Current {
@@ -172,14 +172,14 @@
         border-radius: 50%;
       }
 
-      .Switch {
+      #Switch {
         max-width: 2.5%;
         margin: 13px;
         float: right;
         margin-right: 15px;
       }
 
-      .Switch:hover {
+      #Switch:hover {
         opacity: 75%
       }
 
@@ -217,11 +217,11 @@
     <div id="TopBar">
       <img class="TopLogo" src="learnlua.png">
       <p class="Title">Learn Lua</p>
-      <img class="Switch" src="sun.png" onclick="enableDarkMode()">
-      <a href="#update">Update Log</a>    
-      <a href="#learn">Projects</a>   
-      <a href="#learn">Learn</a>  
-      <a class="Current" href="#home">Home</a>
+      <img id="Switch" src="sun.png" onclick="enableDarkMode()">
+      <a href="#update" class="nav">Update Log</a>    
+      <a href="#learn" class="nav">Projects</a>   
+      <a href="#learn" class="nav">Learn</a>  
+      <a class="Current nav" href="#home">Home</a>
     </div>
     <img class="CenterLogo" src="learnlua.png">
     <p class="IntroText">Welcome to the fascinating world of Roblox Studio! I guess you wanted to start learning, or learn more if you already know some basics. Here at Learn Lua, we'll teach you from the very beginning to the very end. </p>
@@ -253,12 +253,61 @@
       let darkMode = false;
       
       function enableDarkMode() {
-        const body = document.body;
-        body.style.backgroundColor = "#181818"
-        body.style.color = "#b3b3b3"
+        if (!darkMode) {
+          const body = document.body;
+          body.style.backgroundColor = "#181818";
+          body.style.color = "white";
 
-        const TopBar = document.getElementById("TopBar");
-        TopBar.style.backgroundColor = "#121212"
+          const TopBar = document.getElementById("TopBar");
+          TopBar.style.backgroundColor = "#121212";
+
+          const nav = document.getElementsByClassName("nav");
+          for (let n of nav) n.style.color = "white";
+
+          const Titles = document.getElementsByClassName("Title");
+          for (let t of Titles) t.style.color = "white";
+
+          const IntroText = document.getElementsByClassName("IntroText");
+          for (let it of IntroText) it.style.color = "white";
+
+          const LearnButtons = document.getElementsByClassName("LearnButton");
+          for (let lb of LearnButtons) lb.style.backgroundColor = "#404040";
+
+          const Collabs = document.getElementsByClassName("Collabs");
+          for (let c of Collabs) c.style.backgroundColor = "#404040";
+
+          const Switch = document.getElementById("Switch");
+          Switch.src = "dark.png";
+
+          darkMode = true;
+        } else {
+          const body = document.body;
+          body.style.backgroundColor = "white";
+          body.style.color = "black";
+
+          const TopBar = document.getElementById("TopBar");
+          TopBar.style.backgroundColor = "lightgray";
+
+          const nav = document.getElementsByClassName("nav");
+          for (let n of nav) n.style.color = "black";
+
+          const Titles = document.getElementsByClassName("Title");
+          for (let t of Titles) t.style.color = "black";
+
+          const IntroText = document.getElementsByClassName("IntroText");
+          for (let it of IntroText) it.style.color = "black";
+
+          const LearnButtons = document.getElementsByClassName("LearnButton");
+          for (let lb of LearnButtons) lb.style.backgroundColor = "rgba(92,63,207,1)";
+
+          const Collabs = document.getElementsByClassName("Collabs");
+          for (let c of Collabs) c.style.backgroundColor = "rgba(92,63,207,1)";
+
+          const Switch = document.getElementById("Switch");
+          Switch.src = "sun.png";
+
+          darkMode = false;
+        }
       }
     </script>
     <!-- API's [SOON!] -->
